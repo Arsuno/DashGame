@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyShooting : MonoBehaviour
 {
     [SerializeField] private GameObject _shuriken;
-    [SerializeField] private int time;
+    [SerializeField] private int _time;
 
     private void Start()
     {
@@ -14,10 +14,7 @@ public class EnemyShooting : MonoBehaviour
     private IEnumerator ShurikenThrowing()
     {
         GameObject SpawnedShuriken = Instantiate(_shuriken, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(_time);
         StartCoroutine(ShurikenThrowing());
-        
     }
-
-    
 }

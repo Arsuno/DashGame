@@ -10,12 +10,14 @@ public class EnemyController : MonoBehaviour
     private Transform _target;
     private Score _score;
     private LoseTimer _timer;
+    private Currency _currency;
 
-    public void Init(Transform player, Score score, LoseTimer timer)
+    public void Init(Transform player, Score score, LoseTimer timer, Currency currency)
     {
         _target = player;
         _score = score;
         _timer = timer;
+        _currency = currency;
     }
 
     private void Update()
@@ -29,11 +31,12 @@ public class EnemyController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.GetComponent<CharacterMovement>())
+        if(collision.gameObject.GetComponent<CharacterMovement>() != null)
         {
-            Destroy(gameObject);
-            _score.AddPoint();
+            _score.Add(1);
             _timer.AddTime(5);
+            _currency.Add(1);
+            Destroy(gameObject);
         }
 
     }

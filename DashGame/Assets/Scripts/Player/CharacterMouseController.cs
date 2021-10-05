@@ -20,7 +20,8 @@ public class CharacterMouseController : MonoBehaviour
     {
         if (Mathf.Abs((_mouseUpPosition - _mouseDownPosition).magnitude) > _minSwipeLength)
             return true;
-        else return false;
+        else 
+            return false;
     }
 
     private void Update()
@@ -38,9 +39,7 @@ public class CharacterMouseController : MonoBehaviour
             Time.fixedDeltaTime = 0.02f * Time.timeScale;
             _mouseUpPosition = GetMousePosition();
             if (checkSwipeVector() == true)
-                _characterMovement.MoveToPosition((Vector2)transform.position + (_mouseUpPosition - _mouseDownPosition));
+                _characterMovement.TryMoveToPosition((Vector2)transform.position + (_mouseUpPosition - _mouseDownPosition));
         }
     }
-
-
 }

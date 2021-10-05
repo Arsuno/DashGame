@@ -118,8 +118,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea3ffbe53e064741a0e069273274def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 3
+  _speed: 10
   stoppingDistance: 4
+  _target: {fileID: 0}
+  _score: {fileID: 0}
 --- !u!114 &1947648824840463788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shuriken: {fileID: 872273290777788366, guid: d177ac2ba4a682c4abcc26ea9706fce7,
     type: 3}
-  time: 3
+  _time: 1
 --- !u!61 &7892483390105860539
 BoxCollider2D:
   m_ObjectHideFlags: 0
