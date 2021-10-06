@@ -6,7 +6,7 @@ public class LoseTimer : MonoBehaviour
 {
     [SerializeField] private float _staminaTime;
     [SerializeField] private Player _player;
-    [SerializeField] private float test;
+    [SerializeField] private float _currentTimeOnlyDebug; 
     private float _currentStaminaTime;
 
     private void Start()
@@ -15,7 +15,7 @@ public class LoseTimer : MonoBehaviour
     }
     private void Update()
     {
-        test = _currentStaminaTime;
+        _currentTimeOnlyDebug = _currentStaminaTime;
         if (_currentStaminaTime > 0)
             _currentStaminaTime -= Time.deltaTime;
         else

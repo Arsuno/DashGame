@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Currency : MonoBehaviour
 {
-    private uint _value = 2;
+    private uint _value = 0;
 
     public void Add(uint value)
     {

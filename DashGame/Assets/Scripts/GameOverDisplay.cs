@@ -21,6 +21,6 @@ public class GameOverDisplay : MonoBehaviour
 
     private void DisplayScore()
     {
-        _scoreLabel.text = "Score: " + _score.Value.ToString();
+        _scoreLabel.text = _score.Value.ToString();
     }
 }

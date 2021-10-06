@@ -25,5 +25,5 @@ public class Shuriken : MonoBehaviour
             player.Kill();
             Destroy(gameObject);
         }
-    }
+    }   
 }
